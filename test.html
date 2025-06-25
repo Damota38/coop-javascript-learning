@@ -5,23 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>😎 Dédé Factory – Live Coding JS</title>
-<!-- 1. Bootstrap CSS (CDN) -->
+    <!-- 1. Bootstrap CSS (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-<!-- 2. Google Font : Roboto -->
+    <!-- 2. Google Font : Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<!-- 3. Feuille de styles globale -->
+    <!-- 3. Feuille de styles globale -->
     <link rel="stylesheet" href="style.css">
+    <script>
+        function showalerts() {
+            alert("Welcome sur la page test");
+            alert("Ici on test du JS");
+            alert("Une autre pop-up pour faire chier");
+            alert("C'est chiant hein ?");
+            alert("Allez la dernière");
+        }
+    </script>
 </head>
 
 <body>
-    <script>alert("Welcome sur la page test");</script>
-    <script>alert("Ici on test du JS")</script>
-    <script>alert("Une autre pop-up pour faire chier")</script>
-    <script>alert("C'est chiant hein ?")</script>
-    <script>alert("Allez la dernière")</script>
-<!-- NAVBAR : en-tête de navigation responsive -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-purple mb-4">
+    <script>alert("Page de test JS");</script>
+    <!-- NAVBAR : en-tête de navigation responsive -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple mb-4">
         <div class="container">
             <!-- Logo / Brand -->
             <a class="navbar-brand" href="index.html">😎 Dédé Factory</a>
@@ -43,7 +48,7 @@
                         <a class="nav-link" href="references.html">Références</a>
                     </li>
                     <li>
-                        <a class="nav-link active"  href="test.html">Test</a>
+                        <a class="nav-link active" href="test.html">Test</a>
                     </li>
                 </ul>
             </div>
@@ -62,5 +67,37 @@
             </p>
         </div>
     </header>
-</body>    
+
+    <div class="card h-100 shadow-sm">
+        <!-- En-tête de la carte -->
+        <div class="card-header">Exercice</div>
+        <div class="card-body">
+            <!-- Objectif affiché -->
+            <p><strong>Objectif :</strong> Faire un calcul.</p>
+            <!-- Énoncé détaillé -->
+            <p><strong>Problème :</strong><br>
+                1+1 = ?
+            </p>
+            <!-- Zone de saisie de la réponse -->
+            <div class="mb-3">
+                <label for="answer1" class="form-label">Votre réponse :</label>
+                <input type="text" id="answer1" class="form-control" placeholder="...">
+            </div>
+            <!-- Boutons d’action -->
+            <div class="d-flex gap-2">
+                <button id="check1" class="btn btn-purple">Vérifier</button>
+                <button id="reset1" class="btn btn-outline-danger">Relancer</button>
+            </div>
+            <!-- Feedback et solution -->
+            <div id="feedback1" class="mt-3"></div>
+            <div id="solution1" class="solution">
+                1 → <code>1</code> (x visible hors du bloc)<br>
+                2 → <strong>ReferenceError</strong> (y non défini hors du bloc)
+            </div>
+        </div>
+    </div>
+    <button onclick="showalerts()">Afficher des pop-ups</button>
+    <script src="scripts/test.js"></script>
+</body>
+
 </html>
