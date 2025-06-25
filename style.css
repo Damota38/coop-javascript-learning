@@ -4,11 +4,11 @@
 :root {
     --purple:       #b81b1b;
     --red-dark:  #891d1d;
-    --light-bg:     #1c1a1a;
+    --light-bg:     #300000;
     --text-color:   #ffffff;
-    --card-bg:      #000000;
+    --card-bg:      #b58a8a;
     --card-shadow:  rgba(255, 2, 2, 0.543);
-    --code-bg:      rgb(15, 15, 15);
+    --code-bg:      rgb(255, 190, 190);
     --alert-bg:     #ffffff;
     --alert-border: var(--purple);
   }
